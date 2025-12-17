@@ -1,30 +1,35 @@
 export function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="footer">
       <div className="footer-content">
-        <div className="footer-logo">typo.</div>
         <p className="footer-copyright">© {currentYear} typodot.app</p>
 
         <nav className="footer-links" aria-label="フッターリンク">
           <a
-            href="https://github.com"
+            href="https://github.com/koukibuu3"
             target="_blank"
             rel="noopener noreferrer"
           >
             GitHub
           </a>
           <a
-            href="https://twitter.com"
+            href="https://x.com/koukibuu3"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Twitter
+            Twitter(X)
           </a>
-          <a href="mailto:contact@typodot.app">Contact</a>
+          <a
+            href="https://koukibuu3.net"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Blog
+          </a>
         </nav>
       </div>
     </footer>
-  )
+  );
 }
