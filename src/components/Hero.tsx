@@ -26,7 +26,7 @@ export function Hero() {
           animate={animationComplete ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
         >
-          はじめる
+          Download
         </motion.a>
       </div>
 
