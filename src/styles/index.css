@@ -196,6 +196,11 @@ body {
   padding: var(--space-stack-lg);
 }
 
+.value-icon {
+  color: var(--color-text);
+  margin-bottom: var(--space-stack-md);
+}
+
 .value-title {
   font-family: var(--font-sans);
   font-size: var(--size-heading);
