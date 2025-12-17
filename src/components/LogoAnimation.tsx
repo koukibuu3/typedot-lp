@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 
 interface LogoAnimationProps {
@@ -29,16 +29,18 @@ export function LogoAnimation({ onAnimationComplete }: LogoAnimationProps) {
   }, [shouldReduceMotion, onAnimationComplete])
 
   // メインアニメーションシーケンス
+  const isRunning = useRef(false)
   useEffect(() => {
-    if (shouldReduceMotion) return
+    if (shouldReduceMotion || isRunning.current) return
+    isRunning.current = true
 
     const sequence = async () => {
       // Phase 1: アイドル（カーソル点滅）
       await delay(TIMELINE.IDLE_DURATION)
 
       // Phase 2: "type" を入力
-      for (const char of ['t', 'y', 'p', 'e']) {
-        setDisplayText((prev) => prev + char)
+      for (const text of ['t', 'ty', 'typ', 'type']) {
+        setDisplayText(text)
         await delay(TIMELINE.TYPE_INTERVAL)
       }
 
