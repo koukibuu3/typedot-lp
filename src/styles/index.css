@@ -147,6 +147,24 @@ body {
   color: var(--color-text-subtle);
 }
 
+/* App Screenshot Section */
+.app-screenshot {
+  padding: var(--space-section) var(--space-stack-xl);
+  background-color: var(--color-bg);
+}
+
+.screenshot-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.screenshot-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
 /* Value Proposition Section */
 .value-proposition {
   padding: var(--space-section) var(--space-stack-xl);
