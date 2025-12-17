@@ -13,7 +13,7 @@ export function CTA() {
         <h2 className="cta-heading">タイピングを、はじめよう。</h2>
 
         <a href="#" className="cta-button cta-button-large">
-          はじめる
+          Download
         </a>
 
         <a
