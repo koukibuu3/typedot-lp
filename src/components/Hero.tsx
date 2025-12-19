@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { LogoAnimation } from './LogoAnimation'
+import { useLatestRelease } from '../hooks/useLatestRelease'
 
 export function Hero() {
   const [animationComplete, setAnimationComplete] = useState(false)
+  const { downloadUrl } = useLatestRelease()
 
   return (
     <section className="hero">
@@ -20,7 +22,7 @@ export function Hero() {
         </motion.p>
 
         <motion.a
-          href="https://github.com/koukibuu3/typodot/releases/download/v0.1.5/typo.dmg"
+          href={downloadUrl ?? '#'}
           className="cta-button"
           initial={{ opacity: 0, y: 8 }}
           animate={animationComplete ? { opacity: 1, y: 0 } : {}}

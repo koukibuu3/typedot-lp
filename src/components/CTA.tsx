@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import { useLatestRelease } from "../hooks/useLatestRelease";
 
 export function CTA() {
+  const { downloadUrl } = useLatestRelease();
+
   return (
     <section className="cta-section">
       <motion.div
@@ -13,7 +16,7 @@ export function CTA() {
         <h2 className="cta-heading">タイピングを、はじめよう。</h2>
 
         <a
-          href="https://github.com/koukibuu3/typodot/releases/download/v0.1.5/typo.dmg"
+          href={downloadUrl ?? "#"}
           className="cta-button cta-button-large"
         >
           Download
